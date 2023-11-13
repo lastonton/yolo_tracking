@@ -17,22 +17,22 @@ class YoloNASStrategy(YoloInterface):
     fp16 = False
     triton = False
     names = {
-        0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus',
-        6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant',
-        11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat',
-        16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant',
-        21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella',
-        26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis',
-        31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove',
-        36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass',
-        41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl',
-        46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli',
-        51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake',
-        56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table',
-        61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote',
-        66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster',
-        71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase',
-        76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'
+        0: 'người', 1: 'xe đạp', 2: 'ô tô', 3: 'xe máy', 4: 'máy bay', 5: 'xe buýt',
+        6: 'tàu hỏa', 7: 'xe tải', 8: 'thuyền', 9: 'đèn tín hiệu giao thông', 10: 'vòi chữa cháy',
+        11: 'biển báo dừng xe', 12: 'đồng hồ tính tiền đỗ xe', 13: 'ghế dài', 14: 'con chim', 15: 'con mèo',
+        16: 'con chó', 17: 'con ngựa', 18: 'con cừu', 19: 'con bò', 20: 'con voi',
+        21: 'con gấu', 22: 'con ngựa vằn', 23: 'con hươu cao cổ', 24: 'balo', 25: 'cây dù',
+        26: 'túi xách', 27: 'cà vạt', 28: 'vali', 29: 'đĩa frisbee', 30: 'ván trượt tuyết',
+        31: 'ván trượt tuyết ván đôi', 32: 'quả bóng thể thao', 33: 'con diều', 34: 'gậy bóng chày', 35: 'găng tay bóng chày',
+        36: 'ván trượt', 37: 'ván lướt sóng', 38: 'vợt tennis', 39: 'chai', 40: 'ly rượu vang',
+        41: 'tách', 42: 'nĩa', 43: 'dao', 44: 'muỗng', 45: 'tô',
+        46: 'chuối', 47: 'táo', 48: 'sandwich', 49: 'cam', 50: 'bông cải xanh',
+        51: 'cà rốt', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'bánh ngọt',
+        56: 'ghế', 57: 'ghế sofa', 58: 'cây cảnh trong chậu', 59: 'giường', 60: 'bàn ăn',
+        61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'chuột máy tính', 65: 'điều khiển',
+        66: 'bàn phím', 67: 'điện thoại di động', 68: 'lò vi sóng', 69: 'lò nướng', 70: 'máy nướng bánh mì',
+        71: 'bồn rửa bát', 72: 'tủ lạnh', 73: 'sách', 74: 'đồng hồ', 75: 'lọ hoa',
+        76: 'kéo', 77: 'gấu bông', 78: 'máy sấy tóc', 79: 'bàn chải đánh răng'
     }
 
     def __init__(self, model, device, args):
